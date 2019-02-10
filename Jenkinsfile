@@ -1,5 +1,11 @@
-pipeline {
+pipeline 
     agent any
+    triggers{
+        parallel (
+    {
+        build("task1")
+    }
+    }
 
     stages {
         stage('Build') {
